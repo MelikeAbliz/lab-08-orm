@@ -11,15 +11,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Address {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "name")
+public class Address extends BaseEntity{
+
     private String name;
-    @Column(name = "street")
+
     private String street;
-    @Column(name = "zip_code")
+
     private String zipCode;
     @ManyToOne //many addresses to one customer
     private Customer customer;

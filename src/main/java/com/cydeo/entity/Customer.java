@@ -11,10 +11,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Customer extends BaseEntity{
+
 
     @Column(name = "first_name")
     private String firstName;

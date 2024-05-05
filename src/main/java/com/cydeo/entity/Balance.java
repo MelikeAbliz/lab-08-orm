@@ -13,10 +13,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Balance {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Balance extends BaseEntity{
 
     @Column(precision = 19,scale = 2)//precision->total digits number ,like 12345678912345678.23
     private BigDecimal amount;
