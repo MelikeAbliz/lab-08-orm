@@ -20,8 +20,8 @@ public class Product extends BaseEntity{
     private Integer remainingQuantity;
 
 
-    @ManyToMany //spring create third table(cart_items) and create foreign key
-    @JoinTable(name = "cart_item_rel",//change table name
+    @ManyToMany //spring create third table(product_category_rel) and create foreign key
+    @JoinTable(name = "product_category_rel",//change table name
             joinColumns = @JoinColumn(name = "p_id"),//change product  table column name
             inverseJoinColumns = @JoinColumn(name = "c_id"))//change category table column name
     private List<Category> categories;
